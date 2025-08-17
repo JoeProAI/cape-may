@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { AlertTriangle, MapPin, Phone, ExternalLink, Calendar, Thermometer, Wind, Droplets } from 'lucide-react'
+import { AlertTriangle, MapPin, Phone, ExternalLink, Calendar, Thermometer, Wind, Droplets, MessageCircle, Bot } from 'lucide-react'
 
 interface WeatherDay {
   date: string
@@ -246,12 +246,32 @@ export default function Home() {
         </div>
       </main>
 
+      {/* Cape Mayhem GPT Integration */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <a
+          href="https://chatgpt.com/g/g-68a1be4c024c81918f4c70d33981b0fa-cape-mayhem"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group bg-black text-white p-4 sharp-border border-gray-800 sharp-shadow shadow-gray-800 hover:bg-gray-800 transition-colors flex items-center gap-3"
+        >
+          <Bot className="w-6 h-6" />
+          <div className="hidden md:block">
+            <div className="font-bold text-sm">CAPE MAYHEM GPT</div>
+            <div className="text-xs text-gray-300">Ask me anything about Cape May!</div>
+          </div>
+          <ExternalLink className="w-4 h-4 opacity-60 group-hover:opacity-100" />
+        </a>
+      </div>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-6 mt-12">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="font-mono text-sm">
             LAST UPDATED: {weatherData ? new Date(weatherData.last_updated).toLocaleString() : 'UNKNOWN'}
           </p>
+          <div className="mt-2 text-xs text-gray-400">
+            Need help planning? Chat with our <a href="https://chatgpt.com/g/g-68a1be4c024c81918f4c70d33981b0fa-cape-mayhem" target="_blank" rel="noopener noreferrer" className="text-primary-400 hover:text-primary-300 underline">Cape Mayhem GPT</a>
+          </div>
         </div>
       </footer>
     </div>
