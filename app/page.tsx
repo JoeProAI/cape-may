@@ -66,9 +66,29 @@ export default function Home() {
     const lines = text.trim().split('\n')
     const headers = lines[0].split(',')
     return lines.slice(1).map(line => {
-      const values = line.split(',')
+      // Handle CSV with quoted fields that may contain commas
+      const values: string[] = []
+      let current = ''
+      let inQuotes = false
+      
+      for (let i = 0; i < line.length; i++) {
+        const char = line[i]
+        if (char === '"') {
+          inQuotes = !inQuotes
+        } else if (char === ',' && !inQuotes) {
+          values.push(current.trim())
+          current = ''
+        } else {
+          current += char
+        }
+      }
+      values.push(current.trim())
+      
       return headers.reduce((obj: any, header, i) => {
-        obj[header.trim()] = values[i]?.trim().replace(/^"|"$/g, '') || ''
+        let value = values[i]?.replace(/^"|"$/g, '') || ''
+        // Decode HTML entities
+        value = value.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+        obj[header.trim()] = value
         return obj
       }, {})
     })
