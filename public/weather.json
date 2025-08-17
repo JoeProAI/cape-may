@@ -1,0 +1,79 @@
+{
+  "last_updated": "2025-08-17T12:00:00Z",
+  "forecast": [
+    {
+      "date": "2025-08-17",
+      "day": "Sunday",
+      "high_f": 85,
+      "low_f": 72,
+      "precip_chance": 10,
+      "wind_mph": 8,
+      "description": "Mostly Sunny",
+      "advisories": []
+    },
+    {
+      "date": "2025-08-18",
+      "day": "Monday",
+      "high_f": 84,
+      "low_f": 71,
+      "precip_chance": 15,
+      "wind_mph": 10,
+      "description": "Partly Cloudy",
+      "advisories": [
+        "MODERATE_RIP_RISK"
+      ]
+    },
+    {
+      "date": "2025-08-19",
+      "day": "Tuesday",
+      "high_f": 82,
+      "low_f": 70,
+      "precip_chance": 20,
+      "wind_mph": 12,
+      "description": "Partly Cloudy",
+      "advisories": []
+    },
+    {
+      "date": "2025-08-20",
+      "day": "Wednesday",
+      "high_f": 83,
+      "low_f": 71,
+      "precip_chance": 40,
+      "wind_mph": 10,
+      "description": "Scattered Showers",
+      "advisories": []
+    },
+    {
+      "date": "2025-08-21",
+      "day": "Thursday",
+      "high_f": 85,
+      "low_f": 72,
+      "precip_chance": 20,
+      "wind_mph": 8,
+      "description": "Mostly Sunny",
+      "advisories": []
+    },
+    {
+      "date": "2025-08-22",
+      "day": "Friday",
+      "high_f": 86,
+      "low_f": 73,
+      "precip_chance": 10,
+      "wind_mph": 7,
+      "description": "Sunny",
+      "advisories": [
+        "HIGH_RIP_RISK"
+      ]
+    },
+    {
+      "date": "2025-08-23",
+      "day": "Saturday",
+      "high_f": 84,
+      "low_f": 72,
+      "precip_chance": 15,
+      "wind_mph": 9,
+      "description": "Mostly Sunny",
+      "advisories": []
+    }
+  ]
+}

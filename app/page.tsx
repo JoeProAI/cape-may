@@ -42,8 +42,8 @@ export default function Home() {
     const fetchData = async () => {
       try {
         const [weatherRes, activitiesRes] = await Promise.all([
-          fetch('/data/weather.json'),
-          fetch('/data/activities.csv')
+          fetch('/weather.json'),
+          fetch('/activities.csv')
         ])
         
         const weather = await weatherRes.json()
