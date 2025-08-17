@@ -1,0 +1,5 @@
+parents: [{name: "You"}, {name: "Rebecca"}]
+kids: [{name: "Charlotte"}, {name: "Henry"}, {name: "Austin"}]
+other_adults: [{name: "Matt"}, {name: "Amanda"}]
+grandparents: [{name: "Beth", alias: "Nana"}, {name: "Lenny", alias: "Pop"}]
+headcount: {adults: 6, kids: 3, total: 9}
